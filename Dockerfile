@@ -17,6 +17,8 @@ RUN apt-get -y install 			\
 	libjson-perl			\
 	libjson-xs-perl			\
 	liblwp-protocol-https-perl	\
+	libtest-exception-perl		\
+	libtest-pod-perl		\
 	libtext-csv-perl		\
 	libtext-csv-xs-perl		\
 	liburi-perl			\
@@ -29,8 +31,8 @@ RUN apt-get -y install 			\
 	libxml-simple-perl		\
 	libxml-xpath-perl
 
-# This one is ours and is not packaged in Debian.
+# This one is not packaged in Debian.
 RUN mkdir /build
-RUN git clone https://github.com/lkundrak/scraperwiki-perl.git /build
+RUN git clone https://github.com/lkundrak/perl-database-dumptruck.git /build
 RUN cd /build && perl Build.PL && ./Build install
 RUN rm -rf /build
