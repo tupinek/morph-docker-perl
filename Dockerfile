@@ -1,6 +1,8 @@
 FROM openaustralia/morph-base
 MAINTAINER Lubomir Rintel <lkundrak@v3.sk>
 
+RUN apt-get update
+
 # Debian conveniently packages most useful Perl modules, which is great as
 # we don't have to build anything ourselves and can just use what they ship.
 RUN apt-get -y install 			\
