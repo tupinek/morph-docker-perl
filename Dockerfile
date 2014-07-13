@@ -24,7 +24,9 @@ RUN apt-get -y install 			\
 	libtext-csv-perl		\
 	libtext-csv-xs-perl		\
 	liburi-perl			\
+	libweb-scraper-perl		\
 	libwww-perl			\
+	libwww-mechanize-perl		\
 	libxml-dom-perl			\
 	libxml-libxml-perl		\
 	libxml-parser-perl		\
